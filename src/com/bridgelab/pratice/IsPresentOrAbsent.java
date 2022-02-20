@@ -12,25 +12,23 @@ public class IsPresentOrAbsent {
 		int isPresent = (int) Math.floor(Math.random()* PRESENT_NUMBER_RANGE);
 		// System.out.println(isPresent);
 		int empWage;
-		if(isPresent==PRESENT){
-			
+		
+		switch (isPresent) {
+		case PRESENT :
 			System.out.println("Employee Working for Full Time");
 			 empWage = WORKING_HOURS * WAGE_PER_HOUR;
+			break;
 			
-		} else if(isPresent == PART_TIME ) {
-			
+		case PART_TIME :
 			System.out.println("Employee Working for Part Time");
 			empWage = WORKING_HOURS * (WAGE_PER_HOUR/2);
+			break;
 			
-			
-		} else {
-			
+		default :
 			System.out.println("Employee is Absent");
 			empWage = 0;
-
 		}
 		
-	
 		System.out.println("Employee Wage :$ " +empWage+ " USD");
 	}
 
