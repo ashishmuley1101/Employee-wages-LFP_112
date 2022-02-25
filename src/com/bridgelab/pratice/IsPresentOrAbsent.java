@@ -9,14 +9,20 @@ public class IsPresentOrAbsent {
 		final int WORKING_HOURS = 8;
 		final int WAGE_PER_HOUR = 30;
 		final int WORKING_MAX_DAY = 20;
-		double totalWorkingHour = 0;
+		final int WORKING_MAX_HOURS = 100;
 		
-		for(int day = 0 ; day < WORKING_MAX_DAY ; day++ ) {
+		int totalWorkingHour = 0;
+		int totalWorkingday = 0;
+		
+		int empWage = 0;
+		
+		while(totalWorkingHour <= WORKING_MAX_HOURS && totalWorkingday < WORKING_MAX_DAY ) {
 			
+			totalWorkingday++;
 		
 			int isPresent = (int) Math.floor(Math.random()* PRESENT_NUMBER_RANGE);
 			
-			int empWage;
+			
 			
 			switch (isPresent) {
 			case PRESENT :
